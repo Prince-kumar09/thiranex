@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Thirenex 4 - Weather Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="weather-app">
+
+        <header class="header">
+            <h1>🌦️ Weather Dashboard</h1>
+            <p>Get real-time weather information for any city</p>
+        </header>
+
+        <section class="search-section">
+
+            <form id="searchForm">
+                <input
+                    type="text"
+                    id="cityInput"
+                    placeholder="Enter city name..."
+                    autocomplete="off"
+                    required
+                >
+
+                <button type="submit" id="searchButton">
+                    Search
+                </button>
+            </form>
+
+        </section>
+
+        <p id="statusMessage" class="status-message"></p>
+
+        <section id="weatherCard" class="weather-card hidden">
+
+            <div class="location">
+                <h2 id="cityName">--</h2>
+                <p id="countryName">--</p>
+            </div>
+
+            <div class="weather-main">
+
+                <div class="weather-icon" id="weatherIcon">
+                    🌤️
+                </div>
+
+                <div>
+                    <div class="temperature">
+                        <span id="temperature">--</span>°C
+                    </div>
+
+                    <p id="weatherDescription">
+                        --
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="weather-details">
+
+                <div class="weather-box">
+                    <span class="weather-box-icon">💧</span>
+                    <p>Humidity</p>
+                    <strong>
+                        <span id="humidity">--</span>%
+                    </strong>
+                </div>
+
+                <div class="weather-box">
+                    <span class="weather-box-icon">💨</span>
+                    <p>Wind Speed</p>
+                    <strong>
+                        <span id="windSpeed">--</span> km/h
+                    </strong>
+                </div>
+
+                <div class="weather-box">
+                    <span class="weather-box-icon">🌡️</span>
+                    <p>Feels Like</p>
+                    <strong>
+                        <span id="feelsLike">--</span>°C
+                    </strong>
+                </div>
+
+                <div class="weather-box">
+                    <span class="weather-box-icon">☁️</span>
+                    <p>Cloud Cover</p>
+                    <strong>
+                        <span id="cloudCover">--</span>%
+                    </strong>
+                </div>
+
+            </div>
+
+            <div class="updated-time">
+                <p>
+                    Weather data updated for:
+                    <span id="updatedTime">--</span>
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
